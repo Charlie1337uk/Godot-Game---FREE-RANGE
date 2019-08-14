@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tiles101.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Lv Comp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://abe.png" type="Texture" id=4]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 45, 48 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 65536, 0, 0, 65551, 0, 0, 131073, 0, 0, 196610, 0, 0, 196614, 2, 0, 196615, 2, 0, 196616, 2, 0, 196617, 2, 0, 196618, 2, 0, 196619, 2, 0, 196620, 2, 0, 196621, 0, 0, 262147, 0, 0, 327684, 0, 0, 327692, 0, 0, 393221, 0, 0, 458758, 0, 0, 458762, 0, 0, 524295, 0, 0, 524297, 0, 0, 589824, 2, 0, 589825, 2, 0, 589826, 2, 0, 589827, 2, 0, 589828, 2, 0, 589829, 2, 0, 589830, 2, 0, 589831, 2, 0, 589832, 2, 0, 589833, 2, 0, 589834, 2, 0, 589835, 2, 0, 589836, 2, 0, 589837, 2, 0, 589838, 2, 0, 589839, 2, 0, 589840, 2, 0, 589841, 2, 0, 589842, 2, 0, 589843, 2, 0, 589844, 2, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30, 30 )
+
+[node name="Lv Comp" parent="." instance=ExtResource( 3 )]
+position = Vector2( 775, -10 )
+world_scene = "res://L4.tscn"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="abe" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 507.25, 299.25 )
+scale = Vector2( 1.02448, 0.857644 )
+texture = ExtResource( 4 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 400, 115 )

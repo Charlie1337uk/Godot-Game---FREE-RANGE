@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://movingblock.gd" type="Script" id=1]
+[ext_resource path="res://Out Door tiles.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.36111
+height = 30.6241
+
+[node name="l2block" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Platform1" type="KinematicBody2D" parent="."]
+position = Vector2( -3.25208, 2.5014 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="1" type="Sprite" parent="Platform1"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 5, 50, 41, 11 )
+
+[node name="2" type="CollisionShape2D" parent="Platform1"]
+visible = false
+rotation = 1.57729
+shape = SubResource( 1 )
+
+[node name="MoveTween1" type="Tween" parent="."]
+repeat = true
+playback_process_mode = 0
+playback/repeat = true

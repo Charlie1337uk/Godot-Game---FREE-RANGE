@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://.import/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://spr_ram.png" type="Texture" id=2]
+[ext_resource path="res://killArea2D.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 27.0222
+height = 8.43686
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 37.3759
+
+[node name="Enemy" type="KinematicBody2D"]
+position = Vector2( -0.791962, 1.45534 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.56416
+shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 30, 10 )
+enabled = true
+cast_to = Vector2( 0, 20 )
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+rotation = -1.15862
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 15.6426, -16.5302 )
+rotation = 0.897961
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 3.40672, 22.5474 )
+rotation = -0.590201
+shape = SubResource( 2 )

@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tiles101.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Lv Comp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://forest.png" type="Texture" id=4]
+[ext_resource path="res://movingblock.tscn" type="PackedScene" id=5]
+
+[node name="L2" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 48, 48 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 21, 1, 0, 65536, 0, 0, 65539, 0, 0, 65542, 0, 0, 65545, 0, 0, 65548, 0, 0, 65552, 0, 0, 65556, 0, 0, 131073, 0, 0, 131090, 0, 0, 196628, 0, 0, 262147, 0, 0, 262161, 2, 0, 262162, 0, 0, 262163, 2, 0, 327696, 2, 0, 327700, 0, 0, 393221, 0, 0, 393233, 2, 0, 393234, 0, 0, 458759, 0, 0, 458772, 0, 0, 589833, 0, 0, 589842, 0, 0, 720907, 0, 0, 720909, 0, 0, 720912, 0, 0, 786432, 2, 0, 786433, 2, 0, 786434, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786438, 2, 0, 786439, 2, 0, 786440, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 786449, 2, 0, 786450, 2, 0, 786451, 2, 0, 786452, 2, 0, 786453, 2, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30, 25 )
+
+[node name="Lv Comp" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1010, -10 )
+world_scene = "res://L3.tscn"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="forest" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 520.5, 312.25 )
+scale = Vector2( 2.38303, 2.44246 )
+texture = ExtResource( 4 )
+
+[node name="l2block" parent="." instance=ExtResource( 5 )]
+position = Vector2( 700, 50 )

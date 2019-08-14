@@ -1,0 +1,178 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Out Door tiles.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+resource_local_to_scene = true
+extents = Vector2( 23.8601, 22.6476 )
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 7.29886
+height = 32.8661
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 7.63436
+height = 29.7544
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 7, 7 )
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 2.22397
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 2.20256
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 16.0126, 16.2078 )
+
+[sub_resource type="SegmentShape2D" id=8]
+b = Vector2( -0.0440674, 28.9614 )
+
+[sub_resource type="SegmentShape2D" id=9]
+a = Vector2( 26.8424, 9.96165 )
+b = Vector2( -3.9874, 9.96165 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 31.3331, 7.93093 )
+
+[sub_resource type="CapsuleShape2D" id=11]
+radius = 1.4436
+height = 40.5862
+
+[sub_resource type="CapsuleShape2D" id=12]
+radius = 1.75475
+height = 32.0456
+
+[sub_resource type="SegmentShape2D" id=13]
+b = Vector2( -0.0575562, 16.2443 )
+
+[sub_resource type="SegmentShape2D" id=14]
+b = Vector2( -0.0575562, 16.6216 )
+
+[node name="Tiles" type="Node2D"]
+
+[node name="Square" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 40, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 47.7967, 45.9197 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Square"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Column" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 90, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 49.1111, 0.444445, 14.2222, 44.8889 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Column"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Column/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Row" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 140, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1, 47.6667, 45.3333, 14.6667 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Row"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row/StaticBody2D"]
+rotation = 1.56786
+shape = SubResource( 3 )
+
+[node name="Sml Sqr" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 200, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48.3333, 48.3333, 14, 13.3333 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sml Sqr"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sml Sqr/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="Pain in the ass1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 257.849, 38.9245 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64.3687, 0.333334, 63.3333, 31.3333 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pain in the ass1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pain in the ass1/StaticBody2D"]
+position = Vector2( 7.64438, -6.74506 )
+rotation = -0.815626
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Pain in the ass1/StaticBody2D"]
+position = Vector2( 22.7833, -5.69583 )
+rotation = 0.804851
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pain in the ass1/StaticBody2D"]
+position = Vector2( -15.6982, 0.358486 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Pain in the ass1/StaticBody2D"]
+position = Vector2( 30.4713, -12.9055 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Pain in the ass1/StaticBody2D"]
+position = Vector2( 3.82269, 4.90512 )
+shape = SubResource( 9 )
+
+[node name="This took ages" type="Sprite" parent="."]
+position = Vector2( 339.623, 42.6415 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64.5697, 32.6391, 62.6818, 30.8005 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="This took ages"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="This took ages/StaticBody2D"]
+position = Vector2( 0, 7.92443 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="This took ages/StaticBody2D"]
+position = Vector2( 12.8905, -4.48227 )
+rotation = 1.05225
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="This took ages/StaticBody2D"]
+position = Vector2( -15.816, -6.58466 )
+rotation = -1.09819
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="This took ages/StaticBody2D"]
+position = Vector2( 29.8161, -13.4401 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="This took ages/StaticBody2D"]
+position = Vector2( -29.8885, -13.068 )
+shape = SubResource( 14 )

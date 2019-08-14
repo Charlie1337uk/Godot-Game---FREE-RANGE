@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://credits.png" type="Texture" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="rough concept" type="Sprite" parent="."]
+position = Vector2( 512.5, 317.5 )
+scale = Vector2( 2.13542, 1.73611 )
+texture = ExtResource( 1 )
