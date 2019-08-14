@@ -8,4 +8,4 @@ working alongside a skilled artist.
 
 Use the directional arrow keys to move the chicken, aim for the egg. Avoid the obstacles, tackle the ram.
 
-2019 - Charles P./Nathan D.C - Programmer/Artist
+2019 - Charlie P./Nathan D.C - Programmer/Artist
